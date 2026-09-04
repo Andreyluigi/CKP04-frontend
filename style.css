@@ -71,7 +71,7 @@ img {
 
 .secao-2 {
     background-color: var(--cor-offwhite);
-    padding: 40px;
+    padding: 20px 40px;
     width: 100%;
 }
 .container-s2 {
@@ -92,6 +92,26 @@ img {
     grid-row: span 2;
 }
 
+@media (max-width: 1024px) {
+    .container-s1 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "hero hero"
+            "texto texto"
+            "g1 g2"
+            "g3 .";
+        padding: 0 40px;
+    }
+
+    .hero {
+        max-height: 300px;
+    }
+
+    .g1, .g2, .g3 {
+        height: 200px;
+    }
+}
+
 @media (max-width: 600px) {
     .container-s1 {
         grid-template-columns: repeat(3, 1fr);
@@ -105,10 +125,12 @@ img {
     .hero {
         max-height: 250px;
     }
+
     .g1, .g2, .g3 {
-        height: 130px;
-        
+        height: 100px;
+        object-fit: cover;
     }
+
     .secao-2 {
         padding: 20px;
     }
