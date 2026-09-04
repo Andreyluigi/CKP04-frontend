@@ -1,0 +1,44 @@
+:root {
+    --cor-preto: #121212;
+    --cor-offwhite: #fff3ef;
+    --cor-cinza: #b4aaa3;
+    --cor-destaque: #d4c8c0;
+    --fonte-principal: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.secao-1 {
+    background-color: var(--cor-preto);
+    padding: 70px 0;
+    color: var(--cor-offwhite);
+}
+.container-s1 {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "hero hero texto"
+        "g1 g2 g3";
+}
+.hero { grid-area: hero; }
+.bloco-texto { grid-area: texto; padding: 20px; }
+.g1 { grid-area: g1; }
+.g2 { grid-area: g2; }
+.g3 { grid-area: g3; }
